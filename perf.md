@@ -63,4 +63,14 @@ In the interest of keeping this short, I'll gloss over IPC caveats. There are si
  Including Busses and interconnects 
  Check the metrics for the same
 
+### sudo perf record -e block:block_rq_issue -ag
+
+
+
+
+
+
+
+
+
 
