@@ -14,8 +14,7 @@ where the right version is required.
 ### sudo apt install linux-tools-$(uname -r) linux-tools-generic
 ### which perf
 
- perf stat -a sleep 10
-[sudo] password for bharateshwar: 
+## sudo perf stat -a sleep 10
 
  Performance counter stats for 'system wide':
 
