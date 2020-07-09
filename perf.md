@@ -48,5 +48,15 @@ CPU utilization has become a deeply misleading metric: it includes cycles waitin
 
 Performance monitoring products that show %CPU – which is all of them – should also show PMC metrics to explain what that means, and not mislead the end user. For example, they can show %CPU with IPC, and/or instruction-retired cycles vs stalled cycles. Armed with these metrics, developers and operators can choose how to better tune their applications and systems.
 
+
+
+
    
    
+# Measuring IPC
+
+Instructions-per-cycle (IPC) is a good starting point for PMC analysis, and is measured by counting the instruction count and cycle count PMCs. (On some systems it is shown as its invert, cycles-per-instruction, CPI.)
+
+## IPC is like miles-per-gallon for CPUs: how much bang for your buck. The resource here isn't gallons of gasoline but CPU cycles, and the result isn't miles traveled but instructions retired (ie, completed). The more instructions you can complete with your fixed cycles resource, the better.
+
+In the interest of keeping this short, I'll gloss over IPC caveats. There are situations where it can be misleading, like an increase of IPC because your program suffers more spin lock contention, and those spin instructions happen to be very fast. Just like MPG can be misleading, as it can be influenced by the route driven, not just the car's own characteristics.
