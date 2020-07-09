@@ -31,6 +31,15 @@ where the right version is required.
          84,08,740      branch-misses             #   10.94% of all branches          (83.32%)
 
       10.024048257 seconds time elapsed
-
-
+      
+   
 The key metric here is instructions per cycle (insns per cycle: IPC), which shows on average how many instructions we were completed for each CPU clock cycle. The higher, the better (a simplification). The above example of 0.78 sounds not bad (78% busy?) until you realize that this processor's top speed is an IPC of 4.0. This is also known as 4-wide, referring to the instruction fetch/decode path. Which means, the CPU can retire (complete) four instructions with every clock cycle. So an IPC of 0.78 on a 4-wide system, means the CPUs are running at 19.5% their top speed. Newer Intel processors may move to 5-wide.
+
+   perf record -F 99 -p 13204 -g -- sleep 30
+   
+   ##  For Hardware counter for each instruction use tiptop 
+    
+     sudo apt install tipto
+     
+   
+   
