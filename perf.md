@@ -68,13 +68,13 @@ In the interest of keeping this short, I'll gloss over IPC caveats. There are si
 
 ### sudo perf report -n stdio
 
-# Listing all currently known events:
+### Listing all currently known events:
 perf list
-# CPU counter statistics for the entire system, for 5 seconds:
+### CPU counter statistics for the entire system, for 5 seconds:
 perf stat -a sleep 5
 
-# Various basic CPU statistics, system wide, for 10 seconds:
-perf stat -e cycles,instructions,cache-references,cache-misses,bus-cycles -a sleep 10
+### Various basic CPU statistics, system wide, for 10 seconds:
+0
 
 # Various CPU level 1 data cache statistics for the specified command:
 perf stat -e L1-dcache-loads,L1-dcache-load-misses,L1-dcache-stores command
