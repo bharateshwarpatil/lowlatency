@@ -136,6 +136,22 @@ perf record -e L1-dcache-load-misses -c 10000 -ag -- sleep 5
 perf record -e LLC-load-misses -c 100 -ag -- sleep 5 
 
 
+
+# FlameGraph 
+
+## Let's dwell into sample example
+
+## Enable Tracing point at kernel level 
+
+### sudo sh -c 'echo 1 > /proc/sys/kernel/sched_schedstats'
+
+
+
+
+
+
+
+
 Static Tracing
 ### Trace new processes, until Ctrl-C:
 perf record -e sched:sched_process_exec -a
