@@ -283,13 +283,13 @@ To disable it:
 
 
 
-# FlameGraph 
+## FlameGraph 
 
-## Let's dwell into sample example
+  Let's dwell into sample example
 
-## Enable Tracing point at kernel level 
+#### Enable Tracing point at kernel level 
 
-### sudo sh -c 'echo 1 > /proc/sys/kernel/sched_schedstats'
+#### sudo sh -c 'echo 1 > /proc/sys/kernel/sched_schedstats'
 
 
 
