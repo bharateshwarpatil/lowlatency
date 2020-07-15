@@ -277,20 +277,21 @@ To disable it:
 
 ## echo 0 > /sys/kernel/debug/tracing/events/sched/sched_wakeup/enable
 
-
-
-
-
-
-
 ## FlameGraph 
 
-  Let's dwell into sample example
+Let's dwell into sample example
 
 #### Enable Tracing point at kernel level 
 
 #### sudo sh -c 'echo 1 > /proc/sys/kernel/sched_schedstats'
 
+taskset -c 1,3 java -XX:+PreserveFramePointer -cp $WORK_HOME/HARDWARE/HardwareBasedQueues/target/HardwareBasedQueues-1.0-SNAPSHOT.jar org.mk.training.logic.queues.QueuePerfTest 0 5
+
+perf record -F 49 -a -g -- sleep 30; FlameGraph/jmaps
+
+perf script > out.stacks01
+
+cat out.stacks01 | FlameGraph/stackcollapse-perf.pl | grep -v cpu_idle | FlameGraph/flamegraph.pl --color=java --hash > out.stacks01.svg
 
 
 
