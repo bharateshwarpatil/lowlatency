@@ -74,7 +74,7 @@ perf list
 perf stat -a sleep 5
 
 ### Various basic CPU statistics, system wide, for 10 seconds:
-0
+perf stat -e cycles,instructions,cache-references,cache-misses,bus-cycles -a sleep 10
 
 ### Various CPU level 1 data cache statistics for the specified command:
 perf stat -e L1-dcache-loads,L1-dcache-load-misses,L1-dcache-stores command
