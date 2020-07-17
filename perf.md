@@ -58,6 +58,12 @@ Instructions-per-cycle (IPC) is a good starting point for PMC analysis, and is m
 
 In the interest of keeping this short, I'll gloss over IPC caveats. There are situations where it can be misleading, like an increase of IPC because your program suffers more spin lock contention, and those spin instructions happen to be very fast. Just like MPG can be misleading, as it can be influenced by the route driven, not just the car's own characteristics.
 
+To check cpu is wating io or somthing
+### sudo app install sysstat
+
+
+### sudo iostat -xz 1
+
 # For every resources check 
  1) Utilization 
  2) Saturation
