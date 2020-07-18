@@ -59,4 +59,30 @@ Show the percentage of time spent by the CPU or CPUs to run a virtual processor.
 Show the percentage of time that the CPU or CPUs were idle and the system did not have an outstanding disk I/O request.
 Note: On SMP machines a processor that does not have any activity at all is a disabled (offline) processor.
 
--V
+
+## iostat 
+
+iostat 1 
+
+iostat -X 
+
+iostat -N
+
+
+
+## Linux Page Cache Hit Ratio
+
+A recent Linux performance regression turned out to be caused by a difference in the page cache hit ratio: what was caching very well on the older system was caching poorly on the newer one. So how do you measure the page cache hit ratio directly?
+
+How about a tool like this?:
+
+# ./cachestat 1
+Counting cache functions... Output every 1 seconds.
+    HITS   MISSES  DIRTIES    RATIO   BUFFERS_MB   CACHE_MB
+     210      869        0    19.5%            2        209
+     444     1413        0    23.9%            8        210
+     471     1399        0    25.2%           12        211
+     403     1507        3    21.1%           18        211
+     967     1853        3    34.3%           24        212
+     422     1397        0    23.2%           30        212
+[...]
