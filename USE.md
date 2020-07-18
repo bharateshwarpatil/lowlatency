@@ -4,11 +4,11 @@
 ### The Utilization Saturation and Errors (USE) Method
 
 
-| resource         | type          |  utilization   |
-| -------------    | ------------- |  ------------- |
-| CPU utilization  | CPU utilization      |either per-CPU or a system-wide average |
-| -------------    | ------------- |  ------------- |
-| CPU saturation  | CPU  saturation       |run-queue length or scheduler latency |
+| resource         | type          |  utilization                                                  |
+| -------------    | ------------- |  -------------                                                |
+| CPU utilization  | CPU utilization      |either per-CPU or a system-wide average                 |
+| -------------    | ------------- |  -------------                                                |
+| CPU saturation   | CPU  saturation       |run-queue length or scheduler latency |
 | -------------    | ------------- |  ------------- |
 | Memory capacity  | Memory	utilization   | (aka	utilization available free memory (system-wide)|
 | -------------    | ------------- |  ------------- |
