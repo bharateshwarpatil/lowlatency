@@ -1,7 +1,5 @@
 
-####These tools examine system-wide activity in the context of system software or
-
-hardware resources, using kernel counters. Examples are
+#### These tools examine system-wide activity in the context of system software or hardware resources, using kernel counters. Examples are
    ### vmstat: virtual and physical memory statistics, system-wide
    ### mpstat: per-CPU usage
    ### iostat: per-disk I/O usage, reported from the block device interface
