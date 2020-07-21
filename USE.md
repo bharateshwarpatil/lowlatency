@@ -18,6 +18,3 @@
 
 	
 
-
-
-# Thanks to Brendan  
