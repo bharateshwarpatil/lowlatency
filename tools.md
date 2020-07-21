@@ -17,6 +17,11 @@ CPU performance counters:  perf_event
 Network tracing:  libpcap libdlpi, 
 Per-thread latency metrics:  delay accounting
 System-wide tracing:  tracepoints, kprobes, ftrace 
+
+
+
    
-   
+ ###  /proc
+This is a file system interface for kernel statistics. /proc contains a number of directories, where each directory is named after the process ID for the process it
+represents. These directories contain a number of files containing information and statistics about each process, mapped from kernel data structures. On Linux, there are additional files in /proc for system-wide statistics. /proc is dynamically created by the kernel and is not
    
