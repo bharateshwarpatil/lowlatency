@@ -48,3 +48,10 @@ function is called. Switching of threads is managed by __schedule(), which selec
 
 ### uptime: 
  Check load averages to see if CPU load is increasing or decreasing over time. A load average over the number of CPUs in the system usually indicates saturation
+
+### vmstat: 
+ Run vmstat per second, and check the idle columns to see how much headroom there is. Less than 10% can be a problem
+ 
+###  mpstat: 
+Check for individual hot (busy) CPUs, identifying a possible thread scalability problem
+
