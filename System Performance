@@ -12,3 +12,25 @@ execution:
 7. Configuration optimization for production deployment
 8. Monitoring of running production software
 9. Performance analysis of issues
+
+###  CPU Performance 
+
+CPU Performance Counters
+ They typically include counters for the following:
+ 
+ CPU cycles: including stall cycles and types of stall cycles
+
+ CPU instructions: retired (executed)
+
+ Level 1, 2, 3 cache accesses: hits, misses
+
+ Floating-point unit: operations
+
+ Memory I/O: reads, writes, stall cycles
+
+ Resource I/O: reads, writes, stall cycle
+
+Since performance counters vary among manufacturers, a standard has been developed to provide a consistent interface across them. This is the Processor Application Programmers Interface (PAPI). Instead of the Intel names seen in
+PAPI assigns generic names to the counter types, for example, PAPI_tot_cyc for total cycle counts, instead of CPU_CLK_UNHALTED
+
+
