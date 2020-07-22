@@ -33,4 +33,16 @@ CPU Performance Counters
 Since performance counters vary among manufacturers, a standard has been developed to provide a consistent interface across them. This is the Processor Application Programmers Interface (PAPI). Instead of the Intel names seen in
 PAPI assigns generic names to the counter types, for example, PAPI_tot_cyc for total cycle counts, instead of CPU_CLK_UNHALTED
 
+Example:' 
+Event Select  UMASK         Unit           Name            Description
+0x43           0x00       data cache   DATA_MEM_REFS        All loads from any memory type. All stores to any memory type. Each part of a split is counted separately. . . .Does not include I/O accesses or other nonmemory accesses.
+
+## Scheduling 
+A brief summary of how scheduling works for recent Linux and Solaris-based kernels follows. Function names are included, so that you can find them in the
+source code for further reference (although they may have changed). Also refer to internals texts, listed in the Bibliography.
+
+## Linux
+On Linux, time sharing is driven by the system timer interrupt by calling scheduler_tick(), which calls scheduler class functions to manage priorities
+and the expiry of units of CPU time called time slices. Preemption is triggered when threads become runnable and the scheduler class check_preempt_curr()
+function is called. Switching of threads is managed by __schedule(), which selects the highest-priority thread via pick_next_task() for running. Load balancing is performed by the load_balance() function.
 
