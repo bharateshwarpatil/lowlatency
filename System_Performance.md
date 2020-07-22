@@ -55,3 +55,21 @@ function is called. Switching of threads is managed by __schedule(), which selec
 ###  mpstat: 
 Check for individual hot (busy) CPUs, identifying a possible thread scalability problem
 
+### top/prstat: 
+ See which processes and users are the top CPU consumers.
+ 
+### perf/dtrace/stap/oprofile 
+Profile CPU usage stack traces for either user- or kernel-time, to identify why the CPUs are in use
+
+## USE Method
+
+The USE method is for identifying bottlenecks and errors across all components, early in a performance investigation, before deeper and more time-consuming
+strategies are followed.
+For each CPU, check for
+
+####  Utilization: the time the CPU was busy (not in the idle thread)
+####  Saturation: the degree to which runnable threads are queued waiting their turn on-CPU
+####  Errors: CPU errors, including correctable errors
+ 
+
+
