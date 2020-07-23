@@ -71,5 +71,27 @@ For each CPU, check for
 ####  Saturation: the degree to which runnable threads are queued waiting their turn on-CPU
 ####  Errors: CPU errors, including correctable errors
  
+## Profiling
+
+Profiling builds a picture of the target for study. CPU usage can be profiled by
+sampling the state of the CPUs at timed intervals, following these steps:
+1. Select the type of profile data to capture, and the rate.
+2. Begin sampling at a timed interval.
+3. Wait while the activity of interest occurs.
+4. End sampling and collect sample data.
+5. Process the data.
+
+ 
+ ## Static Performance Tuning
+Static performance tuning focuses on issues of the configured environment. For CPU performance, examine the following aspects of the static configuration:
+
+ How many CPUs are available for use? Are they cores? Hardware threads?
+ Is the CPU architecture single- or multiprocessor?
+ What is the size of the CPU caches? Are they shared?
+  What is the CPU clock speed? Is it dynamic (e.g., Intel Turbo Boost and SpeedStep)? Are those dynamic features enabled in the BIOS?
+ What other CPU-related features are enabled or disabled in the BIOS?
+ Are there performance issues (bugs) with this processor model? Are they listed in the processor errata sheet?
+ Are there performance issues (bugs) with this BIOS firmware version?
+ Are there software-imposed CPU usage limits (resource controls) present? What are they
 
 
