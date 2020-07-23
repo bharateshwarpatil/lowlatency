@@ -120,7 +120,9 @@ nice values, and a renice(1M) command was later added (in BSD) to adjust the nic
  ###### The value of 16 is recommended to users who wish to execute long-running programs without flak from the administration
   
  ###### renice -n 16 -p 29457
-#### Resource Controls
+
+## Resource Controls
+
 The operating system may provide fine-grained controls for allocating CPU cycles to processes or groups of processes. These may include fixed limits for CPU utilization and shares for a more flexible approach—allowing idle CPU cycles to be consumed based on a share value. How these work is implementation-specific and
 discussed in Section 6.8, Tuning.
 
@@ -128,10 +130,9 @@ discussed in Section 6.8, Tuning.
 Another way to tune CPU performance involves binding processes and threads to individual CPUs, or collections of CPUs. This can increase CPU cache warmth for
 the process, improving its memory I/O performance. For NUMA systems it also improves memory locality, also improving performance.
 There are generally two ways this is performed:
+
  Process binding: configuring a process to run only on a single CPU, or only on one CPU from a defined set.
- Exclusive CPU sets: partitioning a set of CPUs that can be used only by the
-process(es) assigned to them. This can improve CPU cache further, as when the process is idle other processes cannot use the CPUs, leaving the caches
-warm.
+ Exclusive CPU sets: partitioning a set of CPUs that can be used only by the process(es) assigned to them. This can improve CPU cache further, as when the process is idle other processes cannot use the CPUs, leaving the caches warm.
 
 
 
