@@ -135,5 +135,12 @@ There are generally two ways this is performed:
  Exclusive CPU sets: partitioning a set of CPUs that can be used only by the process(es) assigned to them. This can improve CPU cache further, as when the process is idle other processes cannot use the CPUs, leaving the caches warm.
 
 
-
+## Micro-Benchmarking
+      There are various tools for CPU micro-benchmarking, which typically measure the time taken to perform a simple operation many times. The operation may be based on the following:
+ 
+ <b> CPU instructions</b> : integer arithmetic, floating-point operations, memory loads and stores, branch and other instruction   
+ <b> Memory access</b> : to investigate latency of different CPU caches and main memory throughput
+ <b> Higher-level languages </b> : similar to CPU instruction testing, but written in a higher-level interpreted or compiled language
+ <b> Operating system operations </b>: testing system library and system call functions that are CPU-bound, such as getpid() and process creation        
+   
 
