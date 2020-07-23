@@ -70,6 +70,23 @@ For each CPU, check for
 ####  Utilization: the time the CPU was busy (not in the idle thread)
 ####  Saturation: the degree to which runnable threads are queued waiting their turn on-CPU
 ####  Errors: CPU errors, including correctable errors
+
+## Work load characterisation 
+Load averages (utilization + saturation)
+Using the uptime command check load averages to see if CPU load is increasing or decreasing over time. A load average over the number of CPUs in the system usually indicates saturation
+
+
+## User-time to system-time ratio
+High user-time rates are due to applications spending time performing their own compute. High system-time shows time spent in the kernel instead, which may be further understood by the syscall and interrupt rate. I/O-bound workloads have higher system-time, sys-calls, and also voluntary context switches as threads block waiting for I/O
+
+What is the CPU utilization system-wide? Per CPU?
+ How parallel is the CPU load? Is it single-threaded? How many threads?
+ Which applications or users are using the CPUs? How much?
+ Which kernel threads are using the CPUs? How much?
+ What is the CPU usage of interrupts?
+ What is the CPU interconnect utilization?
+ Why are the CPUs being used (user- and kernel-level call paths)?
+ What types of stall cycles are encountered?
  
 ## Profiling
 
