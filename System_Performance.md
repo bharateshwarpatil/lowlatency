@@ -112,3 +112,16 @@ Static performance tuning focuses on issues of the configured environment. For C
  Are there software-imposed CPU usage limits (resource controls) present? What are they
 
 
+## Priority Tuning
+Unix has always provided a nice() system call for adjusting process priority,which sets a nice-ness value. Positive nice values result in lower process priority
+(nicer), and negative values—which can be set only by the superuser (root)—result in higher priority. A nice(1) command became available to launch programs with
+nice values, and a renice(1M) command was later added (in BSD) to adjust the nice value of already running processes. 
+
+ ###### The value of 16 is recommended to users who wish to execute long-running programs without flak from the administration
+  
+ ###### renice -n 16 -p 29457
+
+
+
+
+
