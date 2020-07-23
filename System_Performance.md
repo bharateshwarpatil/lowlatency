@@ -147,6 +147,13 @@ There are generally two ways this is performed:
  
  <b> Higher-level languages </b> : similar to CPU instruction testing, but written in a higher-level interpreted or compiled language
  
- <b> Operating system operations </b>: testing system library and system call functions that are CPU-bound, such as getpid() and process creation        
+ 
+ 1. Determine the target user population or application request rate.
+ 
+ 2.  Express CPU usage per user or per request. For existing systems, CPU usage can be monitored with the current user count or request rate. For future systems, load generation tools can simulate users so that CPU usage can be measured.
+ 
+ 3.  Extrapolate users or requests when the CPU resources reach 100% utilization. This provides the theoretical limit for the system.
+ 
+ Operating system operations testing system library and system call functions that are CPU-bound, such as getpid() and process creation        
    
 
