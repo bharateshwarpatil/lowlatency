@@ -136,7 +136,10 @@ There are generally two ways this is performed:
 
 
 ## Micro-Benchmarking
-      There are various tools for CPU micro-benchmarking, which typically measure the time taken to perform a simple operation many times. The operation may be based on the following:
+      There are various tools for CPU micro-benchmarking, which typically measure the time taken to perform a simple operation many times. 
+
+
+ The operation may be based on the following:
  
  <b> CPU instructions</b> : integer arithmetic, floating-point operations, memory loads and stores, branch and other instruction   
  
