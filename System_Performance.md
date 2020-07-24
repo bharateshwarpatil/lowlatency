@@ -195,16 +195,29 @@ The multiprocessor statistics tool, mpstat, can report statistics per CPU. Here 
         Average:       3    1.25    0.00    0.75    0.00    0.00    0.00    0.00    0.00    0.00   97.99
 
 
-The -P ALL option was used to print the per-CPU report. By default, mpstat(1) prints only the system-wide summary line (all). The columns are
+The -P ALL option was used to print the per-CPU report. By default, mpstat(1) prints only the system-wide summary line (all).
+The columns are
+
  CPU: logical CPU ID, or all for summary
+
  %usr: user-time
+
  %nice: user-time for processes with a nice’d priority
+
  %sys: system-time (kernel)
+
  %iowait: I/O wait
+
  %irq: hardware interrupt CPU usage
+
  %soft: software interrupt CPU usage
+
  %steal: time spent servicing other tenants
+
  %guest: CPU time spent in guest virtual machines
+
  %idle: idle
+
+
   
  
