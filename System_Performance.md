@@ -160,7 +160,8 @@ There are generally two ways this is performed:
    
 ### vmstat 8
 
-procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+procs -----------memory---------- ---swap--     -----io----      -system--                ------cpu-----
+
  r   b   swpd    free      buff     cache       si    so     bi      bo    in     cs us sy id wa st
  
  0   0      0   2349620    69624    772432      0     0     108      7     68     159  2  1 95  3  0
