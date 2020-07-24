@@ -162,13 +162,15 @@ There are generally two ways this is performed:
 
 procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
  r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 
  0  0      0 2349620  69624 772432    0    0   108     7   68  159  2  1 95  3  0
+ 
  0  0      0 2349872  69632 772432    0    0     0    15  758 1406  0  1 99  0  0
+ 
  0  0      0 2349872  69632 772432    0    0     0     0   81  154  0  0 100  0  0
  
  
- The first line of output is the summary-since-boot, with the exception of r on
-Linux—which begins by showing current values. The columns are
+ The first line of output is the summary-since-boot, with the exception of r on Linux—which begins by showing current values. The columns are
    r: run-queue length—the total number of runnable threads (see below)
   us: user-time
   sy: system-time (kernel)
