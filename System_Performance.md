@@ -154,6 +154,27 @@ There are generally two ways this is performed:
  
  3.  Extrapolate users or requests when the CPU resources reach 100% utilization. This provides the theoretical limit for the system.
  
- Operating system operations testing system library and system call functions that are CPU-bound, such as getpid() and process creation        
+ Operating system operations testing system library and system call functions that are CPU-bound, such as getpid() and process creation       
+ 
+ 
    
+### vmstat 8
+
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 2349620  69624 772432    0    0   108     7   68  159  2  1 95  3  0
+ 0  0      0 2349872  69632 772432    0    0     0    15  758 1406  0  1 99  0  0
+ 0  0      0 2349872  69632 772432    0    0     0     0   81  154  0  0 100  0  0
+ 
+ 
+ The first line of output is the summary-since-boot, with the exception of r on
+Linux—which begins by showing current values. The columns are
+   r: run-queue length—the total number of runnable threads (see below)
+  us: user-time
+  sy: system-time (kernel)
+  id: idle
+  wa: wait I/O, which measures CPU idle when threads are blocked on disk I/O
+  st: stolen (not shown in the output), which for virtualized environments
+  
+shows CPU time spent servicing other tenants
 
