@@ -162,8 +162,8 @@ There are generally two ways this is performed:
 
 procs -----------memory---------- ---swap--     -----io----      -system--                ------cpu-----
 
- r   b   swpd    free      buff     cache       si    so     bi      bo    in     cs us sy id wa st
- 
+ r   b   swpd    free      buff     cache       si    so     bi      bo    in     cs us sy id wa  st
+ |-|-0--|-------|------|-----------|-------|---------|--|-------|-------|--------|--|--|--|--|--|--| 
  0   0      0   2349620    69624    772432      0     0     108      7     68     159  2  1 95  3  0
   
  0   0      0   2349872    69632    772432      0     0       0      15    758    1406  0  1 99  0  0
@@ -186,7 +186,7 @@ The multiprocessor statistics tool, mpstat, can report statistics per CPU. Here 
        
                   
        |Average: |     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle |
-        -------- |---------|-------|------|-------|-------|--------|------|-------|-------|--------|------| 
+       |-------- |---------|-------|------|-------|-------|--------|------|-------|-------|--------|------| 
         Average:     all    2.50    0.00    0.81    0.69    0.00    0.00    0.00    0.00    0.00   96.00
         Average:       0    3.23    0.00    1.00    0.25    0.00    0.00    0.00    0.00    0.00   95.52
        Average:       1    3.25    0.00    0.50    0.00    0.00    0.00    0.00    0.00    0.00   96.25
