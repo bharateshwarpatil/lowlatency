@@ -183,13 +183,12 @@ shows CPU time spent servicing other tenants
 
 ### mpstat
 The multiprocessor statistics tool, mpstat, can report statistics per CPU. Here is some example output from the Linux version:
-
-Average:     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
-Average:     all    2.50    0.00    0.81    0.69    0.00    0.00    0.00    0.00    0.00   96.00
-Average:       0    3.23    0.00    1.00    0.25    0.00    0.00    0.00    0.00    0.00   95.52
-Average:       1    3.25    0.00    0.50    0.00    0.00    0.00    0.00    0.00    0.00   96.25
-Average:       2    2.26    0.00    1.00    2.51    0.00    0.00    0.00    0.00    0.00   94.24
-Average:       3    1.25    0.00    0.75    0.00    0.00    0.00    0.00    0.00    0.00   97.99
+       Average:     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+       Average:     all    2.50    0.00    0.81    0.69    0.00    0.00    0.00    0.00    0.00   96.00
+       Average:       0    3.23    0.00    1.00    0.25    0.00    0.00    0.00    0.00    0.00   95.52
+       Average:       1    3.25    0.00    0.50    0.00    0.00    0.00    0.00    0.00    0.00   96.25
+       Average:       2    2.26    0.00    1.00    2.51    0.00    0.00    0.00    0.00    0.00   94.24
+       Average:       3    1.25    0.00    0.75    0.00    0.00    0.00    0.00    0.00    0.00   97.99
 
   
  
