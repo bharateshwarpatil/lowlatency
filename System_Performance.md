@@ -218,6 +218,9 @@ The columns are
 
  %idle: idle
 
+Key columns are %usr, %sys, and %idle. These identify CPU usage per CPU and show the user-time/kernel-time ratio (see Section 6.3.7, User-Time/Kernel-Time).
+This can also identify “hot” CPUs—those running at 100% utilization (%usr +%sys) while others are not—which can be caused by single-threaded application
+workloads or device interrupt mapping.
 
-  
+
  
