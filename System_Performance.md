@@ -243,12 +243,70 @@ which captures samples at regular intervals to a perf.data file. A report comman
 
 
     
-  
+ <b> perf sched record sleep 10 </b> 
+
+ <b>  perf sched latency </b>  
 
 
 
-
-
+-----------------------------------------------------------------------------------------------------------------
+  Task                  |   Runtime ms  | Switches | Average delay ms | Maximum delay ms | Maximum delay at       |
+ -----------------------------------------------------------------------------------------------------------------
+  Chrome_IOThread:2113  |      3.245 ms |       34 | avg:    0.085 ms | max:    0.731 ms | max at:   1758.127910 s
+  Chrome_ChildIOT:(4)   |      7.140 ms |       50 | avg:    0.080 ms | max:    1.086 ms | max at:   1763.143356 s
+  JS Helper:(4)         |      1.594 ms |       25 | avg:    0.077 ms | max:    0.778 ms | max at:   1757.090081 s
+  chrome:(5)            |     93.762 ms |       72 | avg:    0.076 ms | max:    0.831 ms | max at:   1757.127820 s
+  tracker-miner-f:1399  |     83.643 ms |       38 | avg:    0.061 ms | max:    0.738 ms | max at:   1754.464164 s
+  gmain:(9)             |      4.097 ms |      107 | avg:    0.059 ms | max:    0.840 ms | max at:   1760.879317 s
+  ServiceWorker t:3459  |      0.961 ms |        7 | avg:    0.057 ms | max:    0.179 ms | max at:   1761.128444 s
+  ssh-agent:1548        |      0.016 ms |        1 | avg:    0.051 ms | max:    0.051 ms | max at:   1761.128131 s
+  ThreadPoolForeg:(7)   |      2.981 ms |       37 | avg:    0.031 ms | max:    0.433 ms | max at:   1763.143852 s
+  kworker/3:0-eve:31    |      1.682 ms |       47 | avg:    0.029 ms | max:    0.546 ms | max at:   1758.129023 s
+  gnome-terminal-:3542  |     18.632 ms |      125 | avg:    0.020 ms | max:    0.106 ms | max at:   1755.534176 s
+  kworker/u16:5-e:255   |      1.553 ms |       49 | avg:    0.019 ms | max:    0.304 ms | max at:   1756.269625 s
+  Xorg:1454             |     28.249 ms |      255 | avg:    0.016 ms | max:    0.472 ms | max at:   1755.162585 s
+  kworker/u16:2-i:3597  |      1.310 ms |       44 | avg:    0.015 ms | max:    0.351 ms | max at:   1760.469115 s
+  gnome-shell:1679      |     63.657 ms |      165 | avg:    0.013 ms | max:    0.544 ms | max at:   1760.476801 s
+  wpa_supplicant:762    |      0.035 ms |        1 | avg:    0.013 ms | max:    0.013 ms | max at:   1763.147825 s
+  ksoftirqd/0:9         |      0.098 ms |       11 | avg:    0.013 ms | max:    0.042 ms | max at:   1759.280363 s
+  gedit:3726            |      0.871 ms |       16 | avg:    0.010 ms | max:    0.016 ms | max at:   1756.745903 s
+  ksoftirqd/1:18        |      0.216 ms |       29 | avg:    0.010 ms | max:    0.071 ms | max at:   1761.680079 s
+  kworker/1:0-eve:3698  |      0.651 ms |       60 | avg:    0.009 ms | max:    0.027 ms | max at:   1757.036655 s
+  InputThread:1472      |      2.810 ms |       43 | avg:    0.008 ms | max:    0.013 ms | max at:   1755.067619 s
+  rcu_sched:10          |      1.029 ms |      132 | avg:    0.007 ms | max:    0.068 ms | max at:   1761.680073 s
+  migration/2:23        |      0.000 ms |        3 | avg:    0.007 ms | max:    0.008 ms | max at:   1760.236192 s
+  systemd-resolve:703   |      0.608 ms |        4 | avg:    0.007 ms | max:    0.017 ms | max at:   1763.143857 s
+  migration/0:11        |      0.000 ms |        3 | avg:    0.007 ms | max:    0.007 ms | max at:   1756.232724 s
+  migration/3:29        |      0.000 ms |        3 | avg:    0.006 ms | max:    0.007 ms | max at:   1764.239659 s
+  rtkit-daemon:(2)      |      0.031 ms |        2 | avg:    0.006 ms | max:    0.010 ms | max at:   1760.332193 s
+  jbd2/sda5-8:288       |      0.140 ms |        3 | avg:    0.006 ms | max:    0.008 ms | max at:   1759.135891 s
+  kerneloops:(2)        |      2.422 ms |        2 | avg:    0.006 ms | max:    0.006 ms | max at:   1759.124348 s
+  migration/1:17        |      0.000 ms |        4 | avg:    0.005 ms | max:    0.009 ms | max at:   1756.236726 s
+  kworker/2:1-mm_:3211  |      2.711 ms |       39 | avg:    0.005 ms | max:    0.040 ms | max at:   1763.147857 s
+  sleep:3835            |      1.101 ms |        2 | avg:    0.005 ms | max:    0.006 ms | max at:   1754.453818 s
+  thermald:817          |      0.363 ms |        3 | avg:    0.005 ms | max:    0.006 ms | max at:   1758.912654 s
+  kworker/0:3-mm_:258   |      0.677 ms |       53 | avg:    0.005 ms | max:    0.011 ms | max at:   1757.100626 s
+  GpuWatchdog:2216      |      0.091 ms |        1 | avg:    0.005 ms | max:    0.005 ms | max at:   1759.831514 s
+  gvfs-afc-volume:1745  |      0.210 ms |       10 | avg:    0.005 ms | max:    0.012 ms | max at:   1762.311925 s
+  kworker/1:1H-kb:286   |      0.232 ms |       13 | avg:    0.005 ms | max:    0.012 ms | max at:   1760.490611 s
+  systemd:1             |      0.671 ms |       63 | avg:    0.004 ms | max:    0.017 ms | max at:   1761.693031 s
+  perf:(2)              |     19.796 ms |       11 | avg:    0.004 ms | max:    0.006 ms | max at:   1758.249253 s
+  java:(12)             |  19988.316 ms |     3489 | avg:    0.004 ms | max:    0.394 ms | max at:   1759.245167 s
+  irqbalance:748        |      0.393 ms |        1 | avg:    0.004 ms | max:    0.004 ms | max at:   1758.136479 s
+  kworker/0:1H-kb:260   |      0.092 ms |        7 | avg:    0.004 ms | max:    0.007 ms | max at:   1757.100619 s
+  :3840:3840            |      0.102 ms |        1 | avg:    0.004 ms | max:    0.004 ms | max at:   1754.887729 s
+  cron:713              |      0.075 ms |        1 | avg:    0.004 ms | max:    0.004 ms | max at:   1757.802634 s
+  kworker/3:1H-ev:268   |      0.028 ms |        3 | avg:    0.003 ms | max:    0.004 ms | max at:   1763.496656 s
+  :3838:3838            |      0.017 ms |        1 | avg:    0.003 ms | max:    0.003 ms | max at:   1754.818468 s
+  pool-/usr/libex:(3)   |      0.126 ms |        3 | avg:    0.003 ms | max:    0.005 ms | max at:   1754.530476 s
+  systemd-journal:329   |      0.089 ms |        1 | avg:    0.003 ms | max:    0.003 ms | max at:   1754.454122 s
+  ksoftirqd/3:30        |      0.045 ms |        6 | avg:    0.003 ms | max:    0.003 ms | max at:   1756.236741 s
+  kworker/2:1H-kb:259   |      0.039 ms |        3 | avg:    0.003 ms | max:    0.003 ms | max at:   1762.895441 s
+  tracker-store:3827    |      0.025 ms |        1 | avg:    0.002 ms | max:    0.002 ms | max at:   1755.241849 s
+  Chrome_SyncThre:2357  |      0.071 ms |        1 | avg:    0.002 ms | max:    0.002 ms | max at:   1757.487846 s
+ -----------------------------------------------------------------------------------------------------------------
+  TOTAL:                |  20336.702 ms |     5085 |
+ ---------------------------------------------------
 
 
 
