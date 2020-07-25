@@ -223,4 +223,34 @@ This can also identify “hot” CPUs—those running at 100% utilization (%usr 
 workloads or device interrupt mapping.
 
 
+
+
+## perf
+
+Originally called Performance Counters for Linux (PCL), the perf(1) command has evolved and become a collection of tools for profiling and tracing, now called
+Linux Performance Events (LPE). Each tool is selected as a subcommand. For example, perf stat executes the stat command, which provides CPC-based statistics. These commands are listed in the USAGE message, and a selection is reproduced here in Table 6.8
+
+### System Profiling
+
+perf(1) can be used to profile CPU call paths, summarizing where CPU time is spent in both kernel- and user-space. This is performed by the record command,
+which captures samples at regular intervals to a perf.data file. A report command is then used to view the file.In the following example, all CPUs (-a) are sampled with call stacks (-g) at 997 Hz (-F 997) for 10 s (sleep 10). The --stdio option is used to print all the output, instead of operating in interactive mode
+
+
+<b> perf record -a -g -F 997 sleep 10 </b> 
+    
+<b> perf report --stdio </b>
+
+
+
+    
+  
+
+
+
+
+
+
+
+
+
  
