@@ -307,6 +307,56 @@ which captures samples at regular intervals to a perf.data file. A report comman
     -----------------------------------------------------------------------------------------------------------------
      TOTAL:                |  20336.702 ms |     5085 |
     ---------------------------------------------------
+     
+    
+    
+## SysBench
+
+The SysBench system benchmark suite has a simple CPU benchmark tool that calculates prime numbers. For example 
+
+   sysbench --num-threads=8 --test=cpu --cpu-max-prime=100000 run
+   
+     WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+     WARNING: --num-threads is deprecated, use --threads instead
+     sysbench 1.0.18 (using system LuaJIT 2.1.0-beta3)
+
+     Running the test with following options:
+     Number of threads: 8
+     Initializing random number generator from current time
+
+
+     Prime numbers limit: 100000
+
+     Initializing worker threads...
+
+     Threads started!
+
+     CPU speed:
+         events per second:   104.45
+
+     General statistics:
+         total time:                          10.0392s
+         total number of events:              1049
+
+     Latency (ms):
+              min:                                   38.25
+              avg:                                   76.34
+              max:                                  106.26
+              95th percentile:                       86.00
+              sum:                                80076.75
+
+     Threads fairness:
+         events (avg/stddev):           131.1250/0.93
+         execution time (avg/stddev):   10.0096/0.01
+
+   
+## Process Binding
+ taskset
+
+
+   
+
+
 
 
 
